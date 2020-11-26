@@ -1,5 +1,5 @@
 ﻿import React, { Component, useRef, useState } from 'react';
-import './App.css';
+import '../App.css';
 
 import firebase from 'firebase/app';
 import 'firebase/firestore';
@@ -9,15 +9,22 @@ import 'firebase/analytics';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 
-class NextPage extends Component {
-  render() {
-    return (
-      <div>
-        This is test page
-      </div>
-    );
-  }
-}
+import HomePage from './HomePage.js';
+
+firebase.initializeApp({
+    apiKey: "AIzaSyBmDYQzSZtgIMNdp5kLsHOIt9Z4EBin_iQ",
+    authDomain: "aaaa-c2af6.firebaseapp.com",
+    databaseURL: "https://aaaa-c2af6.firebaseio.com",
+    projectId: "aaaa-c2af6",
+    storageBucket: "aaaa-c2af6.appspot.com",
+    messagingSenderId: "917934183172",
+    appId: "1:917934183172:web:51ccda146a1fa9dd48f651",
+    measurementId: "G-EG1Z904D3D"
+})
+
+const auth = firebase.auth();
+const firestore = firebase.firestore();
+const analytics = firebase.analytics();
 
 function ChatRoom() {
     const dummy = useRef();
@@ -78,4 +85,4 @@ function ChatMessage(props) {
     </>)
 }
 
-export default NextPage;
+export default ChatRoom;

@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import { Link, Route } from 'react-router-dom';
 import '../App.css';
 
 import firebase from 'firebase/app';
@@ -11,16 +12,6 @@ import { useCollectionData } from 'react-firebase-hooks/firestore';
 
 import NextPage from './NextPage.js';
 
-firebase.initializeApp({
-  apiKey: "AIzaSyBmDYQzSZtgIMNdp5kLsHOIt9Z4EBin_iQ",
-  authDomain: "aaaa-c2af6.firebaseapp.com",
-  databaseURL: "https://aaaa-c2af6.firebaseio.com",
-  projectId: "aaaa-c2af6",
-  storageBucket: "aaaa-c2af6.appspot.com",
-  messagingSenderId: "917934183172",
-  appId: "1:917934183172:web:51ccda146a1fa9dd48f651",
-  measurementId: "G-EG1Z904D3D"
-})
 
 const auth = firebase.auth();
 const firestore = firebase.firestore();
@@ -64,7 +55,7 @@ function SignIn() {
 
 function SignOut() {
   return auth.currentUser && (
-    <button className="sign-out" onClick={() => auth.signOut()}>Sign Out</button>
+    <button className="sign-out" onClick={() => auth.signOut()}><Link to="/">Sign Out</Link></button>
   )
 }
 
