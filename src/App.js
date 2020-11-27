@@ -9,9 +9,9 @@ class App extends Component {
         return (
             <div>
                 <Switch>
-                    <Route path="/" component={HomePage} />
+                    <Route exact path="/" component={HomePage} />
                     <Route path="/writingroom" component={NextPage} />
-                    <Route path="/dicuss" component={DiscussPage}/>
+                    <Route path="/discuss" component={DiscussPage}/>
                 </Switch>
             </div>
         );

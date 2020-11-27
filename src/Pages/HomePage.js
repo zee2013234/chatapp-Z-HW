@@ -72,7 +72,7 @@ function HomePage() {
               <Link to="/discuss">Discuss room</Link>
           </div>
           <Route path="/writingroom" component={NextPage}/>
-          <Route path="/dicuss" component={DiscussPage}/>
+          <Route path="/discuss" component={DiscussPage}/>
       </div>
       )
 }
