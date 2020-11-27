@@ -1,6 +1,7 @@
 ﻿import React, { Component, useRef, useState } from 'react';
 import { Link, Route } from 'react-router-dom';
 
+import Header from './Header.js'
 
 import firebase from 'firebase/app';
 import 'firebase/firestore';
@@ -54,9 +55,7 @@ function ChatRoom() {
     }
 
     return (<>
-        <header>
-            소설 작성방 <button className="go-back"><Link to="/">Go Back></Link></button>
-        </header>
+        <Header/>
         <main>
 
             {messages && messages.map(msg => <ChatMessage key={msg.id} message={msg} />)}
