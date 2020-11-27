@@ -1,7 +1,7 @@
 .HD-header {
     background-color: white;
-    width: 1000px;
-    margin-top: 10px;
+    width: 1800px;
+    height: 0px;
 }
 .HD-navbar {
     list-style-type: none;
@@ -9,6 +9,18 @@
     padding: 0;
     overflow: hidden;
     background-color: white;
+}
+.sign-out{
+  float: left;
+  background-color: white;
+  color: black;
+  display: block;
+  text-align: center;
+  padding: 10px;
+  padding-bottom: 0px;
+  margin-top: 18px;
+  font-size: 1.3em;
+  border: none;
 }
 .Hd-link {
     float: left;
@@ -20,6 +32,7 @@
     padding-bottom: 0px;
     margin-top: 18px;
     font-size: 1.3em;
+    border: none;
 }
 .HD-la {
     margin-right: 100px;
