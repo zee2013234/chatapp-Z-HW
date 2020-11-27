@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { Link, Route } from 'react-router-dom';
 import '../App.css';
-
+import Header from './Header.js'
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
@@ -23,21 +23,13 @@ function App() {
   const [user] = useAuthState(auth);
 
   return (
-    <div className="App">
-      <header>
-        <h1>소설작성방</h1>
-        <SignOut />
-      </header>
-
       <section>
         {user ? <HomePage /> : <SignIn />}
       </section>
-
-    </div>
   );
 }
 
-function SignIn() {
+export function SignIn() {
 
   const signInWithGoogle = () => {
     const provider = new firebase.auth.GoogleAuthProvider();
@@ -63,6 +55,7 @@ function SignOut() {
 function HomePage() {
   return (
       <div>
+        <Header/>
           <div className="row">
               this is home page
           </div>
