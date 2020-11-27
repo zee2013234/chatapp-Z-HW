@@ -11,7 +11,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 
 import NextPage from './NextPage.js';
-
+import DiscussPage from './Discuss.js';
 
 const auth = firebase.auth();
 const firestore = firebase.firestore();
@@ -25,9 +25,9 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>⚛️🔥💬</h1>
+        <h1>소설작성방</h1>
         <SignOut />
-          </header>
+      </header>
 
       <section>
         {user ? <HomePage /> : <SignIn />}
@@ -68,8 +68,11 @@ function HomePage() {
           </div>
           <div className="row">
               <Link to="/writingroom"> Next room</Link>
+              <h2/>
+              <Link to="/discuss">Discuss room</Link>
           </div>
           <Route path="/writingroom" component={NextPage}/>
+          <Route path="/dicuss" component={DiscussPage}/>
       </div>
       )
 }
