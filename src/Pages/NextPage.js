@@ -1,11 +1,9 @@
 ﻿import React, { Component, useRef, useState } from 'react';
-import '../App.css';
 
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
 import 'firebase/analytics';
-
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 
@@ -22,9 +20,10 @@ firebase.initializeApp({
     measurementId: "G-EG1Z904D3D"
 })
 
-const auth = firebase.auth();
-const firestore = firebase.firestore();
-const analytics = firebase.analytics();
+export const auth = firebase.auth();
+export const firestore = firebase.firestore();
+export const analytics = firebase.analytics();
+
 
 function ChatRoom() {
     const dummy = useRef();
