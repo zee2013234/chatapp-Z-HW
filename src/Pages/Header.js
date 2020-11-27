@@ -2,6 +2,11 @@ import React from 'react';
 import { Link, Route } from 'react-router-dom';
 import ChatRoom from './NextPage.js';
 import '../style/Header.css'
+import firebase from 'firebase/app';
+import 'firebase/firestore';
+import 'firebase/auth';
+import 'firebase/analytics';
+
 
 const Header = () => {
 
@@ -15,6 +20,7 @@ const Header = () => {
         <li><Link to="/library" className="Hd-link">마이페이지</Link></li>
         <li><Link to="/library" className="Hd-link">알림</Link></li>
         <li><Link to="/library" className="Hd-link">설정</Link></li>
+        <SignOut />
         </div>
       </ul>
       <hr></hr>
@@ -23,5 +29,11 @@ const Header = () => {
     </div>
   )
 };
+function SignOut() {
+  const auth= firebase.auth();
+  return auth.currentUser && (
+    <text className="sign-out" onClick={() => auth.signOut()}><Link to="/">Sign Out</Link></text>
+  )
+}
 
 export default Header;
