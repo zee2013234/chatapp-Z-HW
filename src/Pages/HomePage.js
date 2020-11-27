@@ -16,6 +16,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 
 import NextPage from './NextPage.js';
+import Header from './Header.js';
 
 
 const auth = firebase.auth();
