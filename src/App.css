@@ -102,16 +102,21 @@ opacity: 0.5;
 cursor: not-allowed;
 }
 
+.title{
+  font-size: 40px;
+  width:1800px;
+  text-align: center;
+}
 
 .sign-in {
-color: black;
-background: white;
+color: white;
+background: black;
 max-width: 2400px;
-width: 1800px;
+width: 500px;
 text-align: center;
-height: 800px;
+height: 100px;
 border: none;
-font-size: 125px;
+font-size: 50px;
 }
 
 
