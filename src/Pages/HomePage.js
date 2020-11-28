@@ -46,11 +46,6 @@ export function SignIn() {
 
 }
 
-function SignOut() {
-  return auth.currentUser && (
-    <button className="sign-out" onClick={() => auth.signOut()}><Link to="/">Sign Out</Link></button>
-  )
-}
 
 
 function HomePage() {
