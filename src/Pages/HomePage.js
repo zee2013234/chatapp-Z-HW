@@ -38,8 +38,9 @@ export function SignIn() {
 
   return (
     <>
-      <button className="sign-in" onClick={signInWithGoogle}>Sign in with Google</button>
-      <p>Do not violate the community guidelines or you will be banned for life!</p>
+      <text className="title">롤링롤링</text>
+      <h2/>
+      <button className="sign-in" onClick={signInWithGoogle}>Google 로그인</button>
     </>
   )
 
@@ -56,16 +57,19 @@ function HomePage() {
   return (
       <div>
         <Header/>
-          <div className="row">
-              this is home page
-          </div>
-          <div className="row">
-              <Link to="/writingroom"> Next room</Link>
-              <h2/>
-              <Link to="/discuss">Discuss room</Link>
-          </div>
-          <Route path="/writingroom" component={NextPage}/>
-          <Route path="/discuss" component={DiscussPage}/>
+        <div>
+          <h2/>
+            <div className="row">
+                this is home page
+            </div>
+            <div className="row">
+                <Link to="/writingroom"> Next room</Link>
+                <h2/>
+                <Link to="/discuss">Discuss room</Link>
+            </div>
+            <Route path="/writingroom" component={NextPage}/>
+            <Route path="/discuss" component={DiscussPage}/>
+        </div>
       </div>
       )
 }
