@@ -4,7 +4,9 @@ import 'firebase/firestore';
 import 'firebase/auth';
 import 'firebase/analytics';
 
-import Header from './Header.js'
+import '../App.css'
+
+import Chatheader from './Chatheader.js'
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 import Discuss from './Discuss.js';
@@ -40,7 +42,7 @@ function ChatRoom1() {
     }
 
     return (<>
-        <Header/>
+        <Chatheader/>
         <main>
 
             {ccc && ccc.map(msg => <ChatMessage key={msg.id} message={msg} />)}
