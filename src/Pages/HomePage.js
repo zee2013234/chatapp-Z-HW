@@ -64,8 +64,6 @@ function HomePage() {
             </div>
             <div className="row">
                 <Link to="/writingroom"> Next room</Link>
-                <h2/>
-                <Link to="/discuss">Discuss room</Link>
             </div>
             <Route path="/writingroom" component={NextPage}/>
             <Route path="/discuss" component={DiscussPage}/>
