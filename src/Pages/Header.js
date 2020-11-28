@@ -31,7 +31,7 @@ const Header = () => {
 function SignOut() {
   const auth= firebase.auth();
   return auth.currentUser && (
-    <text className="sign-out" onClick={() => auth.signOut()}><Link to="/">Sign Out</Link></text>
+    <text className="sign-out" onClick={() => auth.signOut()}><Link to="/">로그아웃</Link></text>
   )
 }
 
