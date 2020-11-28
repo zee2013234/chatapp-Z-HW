@@ -3,6 +3,7 @@ import TableRow from '@material-ui/core/TableRow'
 import PublishInfoModal from './Modals/PublishInfoModal.js';
 import {makeStyles} from "@material-ui/core/styles";
 import {Grid, Paper} from "@material-ui/core";
+import Header from '../Header.js'
 
 const useStyles = makeStyles((theme)=>({
   grid:{
@@ -85,7 +86,9 @@ const searchbarstyle={
 const PublishedList =() => {
 
     const classes=useStyles();
-    return(
+    return (
+        <>
+            <Header />
         <Grid container spacing={2} className={classes.grid}>
           <Grid item xs={6}>
             <input style={searchbarstyle}/>
@@ -155,7 +158,8 @@ const PublishedList =() => {
               </Paper>
             </Grid>
           </Grid>
-        </Grid>
+            </Grid>
+            </>
 
     );
 };

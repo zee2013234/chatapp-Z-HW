@@ -3,6 +3,7 @@ import TableRow from '@material-ui/core/TableRow'
 import ChatInfoModal from './Modals/ChatInfoModal.js';
 import {makeStyles} from "@material-ui/core/styles";
 import {Grid, Paper} from "@material-ui/core";
+import Header from '../Header.js'
 
 const useStyles = makeStyles((theme)=>({
   grid:{
@@ -66,7 +67,9 @@ const searchbarstyle={
 const RoomList = () => {
 
   const classes=useStyles();
-  return(
+    return (
+      <>
+            <Header/>
       <Grid container spacing={2} className={classes.grid}>
         <Grid item xs={6}>
           <input style={searchbarstyle}/>
@@ -152,7 +155,7 @@ const RoomList = () => {
           </Grid>
         </Grid>
       </Grid>
-
+            </>
   );
 };
 class Customer extends React.Component{
