@@ -104,10 +104,14 @@ cursor: not-allowed;
 
 
 .sign-in {
-color: #282c34;
+color: black;
 background: white;
-max-width: 400px;
-margin: 0 auto;
+max-width: 2400px;
+width: 1800px;
+text-align: center;
+height: 800px;
+border: none;
+font-size: 125px;
 }
 
 
@@ -124,7 +128,7 @@ line-height: 24px;
 padding: 10px 20px;
 border-radius: 25px;
 position: relative;
-color: white;
+color: black;
 text-align: center;
 font-size: 30px;
 }
